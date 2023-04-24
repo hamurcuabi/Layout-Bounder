@@ -1,10 +1,8 @@
 # Layout Bounder
 
-<!-- Plugin description -->
 This plugin simplifies the usage of layout debug mode's.
 \
 ![Layout Bounder](https://user-images.githubusercontent.com/23655824/233925249-1edf1757-e054-4459-8ef5-1820fd6d16f6.gif)  
-<!-- Plugin description end -->
 
 ## Usage
 1. Connect an Android device.

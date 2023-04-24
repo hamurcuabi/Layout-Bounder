@@ -60,4 +60,5 @@
             <reference id="LayoutBounder.ClearLog"/>
         </group>
     </actions>
+
 </idea-plugin>
