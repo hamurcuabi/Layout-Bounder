@@ -1,0 +1,63 @@
+<idea-plugin>
+    <id>com.hamurcuabi.layoutbounder</id>
+    <name>Layout Bounder</name>
+    <vendor>Emre Hamurcu</vendor>
+
+    <!-- Product and plugin compatibility requirements -->
+    <!-- https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html -->
+    <depends>com.intellij.modules.platform</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <applicationService serviceImplementation="com.hamurcuabi.layoutbounder.services.AdbService"/>
+        <applicationService serviceImplementation="com.hamurcuabi.layoutbounder.services.LogService"/>
+        <applicationService
+                serviceInterface="com.hamurcuabi.layoutbounder.services.PropertiesService"
+                serviceImplementation="com.hamurcuabi.layoutbounder.services.PropertiesServiceImpl"/>
+        <toolWindow
+                id="Layout Bounder"
+                anchor="right"
+                secondary="true"
+                icon="/icons/toolWindowIcon.svg"
+                factoryClass="com.hamurcuabi.layoutbounder.ui.view.WindowFactory"/>
+        <applicationConfigurable instance="com.hamurcuabi.layoutbounder.settings.LayoutBounderConfigurable"/>
+        <notificationGroup
+                id="layout_bounder_notification_group"
+                displayType="BALLOON"/>
+
+    </extensions>
+
+    <actions>
+        <action
+                id="LayoutBounder.Refresh"
+                class="com.hamurcuabi.layoutbounder.actions.RestartAdbAction"
+                icon="AllIcons.Actions.Refresh"
+                text="Restart ADB"/>
+        <action
+                id="LayoutBounder.ToggleLog"
+                class="com.hamurcuabi.layoutbounder.actions.ToggleLogAction"
+                icon="AllIcons.Debugger.Console"
+                text="Toggle Log"/>
+        <action
+                id="LayoutBounder.OpenSettings"
+                class="com.hamurcuabi.layoutbounder.actions.OpenSettingsAction"
+                icon="AllIcons.General.Settings"
+                text="Open Settings"/>
+
+        <group id="LayoutBounder.ToolbarActions">
+            <separator/>
+            <reference id="LayoutBounder.ToggleLog"/>
+            <reference id="LayoutBounder.OpenSettings"/>
+            <separator/>
+            <reference id="LayoutBounder.Refresh"/>
+        </group>
+
+        <action
+                id="LayoutBounder.ClearLog"
+                class="com.hamurcuabi.layoutbounder.actions.ClearLogAction"
+                icon="/icons/deleteIcon.svg"
+                text="Clear Log"/>
+        <group id="LayoutBounder.LogToolbarActions">
+            <reference id="LayoutBounder.ClearLog"/>
+        </group>
+    </actions>
+</idea-plugin>
