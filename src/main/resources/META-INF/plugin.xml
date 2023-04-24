@@ -60,4 +60,9 @@
             <reference id="LayoutBounder.ClearLog"/>
         </group>
     </actions>
+
+    <description><![CDATA[
+This plugin simplifies the usage of layout debug mode's.
+]]></description>
+
 </idea-plugin>
