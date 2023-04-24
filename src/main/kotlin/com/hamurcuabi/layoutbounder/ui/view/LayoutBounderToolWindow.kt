@@ -62,7 +62,7 @@ class LayoutBounderToolWindow(
         }
     }
 
-    private val splitter = JBSplitter(true, "AdbWifi.ShellPaneProportion", DEFAULT_PANEL_PROPORTION)
+    private val splitter = JBSplitter(true, "LayoutBounder.ShellPaneProportion", DEFAULT_PANEL_PROPORTION)
     private val deviceListPanel = DeviceListPanel(devicePanelListener)
     private val logPanel = LogPanel()
     private val topPanel = JBScrollPane().apply {
@@ -129,7 +129,7 @@ class LayoutBounderToolWindow(
 
     init {
         val actionManager = ActionManager.getInstance()
-        val toolbarActionGroup = actionManager.getAction("AdbWifi.ToolbarActions") as DefaultActionGroup
+        val toolbarActionGroup = actionManager.getAction("LayoutBounder.ToolbarActions") as DefaultActionGroup
         val toolbar = actionManager.createActionToolbar(
             ActionPlaces.TOOLWINDOW_TITLE,
             toolbarActionGroup,
@@ -139,7 +139,7 @@ class LayoutBounderToolWindow(
         addToTop(toolbar.component)
         addToCenter(splitter)
 
-        val logToolbarActionGroup = actionManager.getAction("AdbWifi.LogToolbarActions") as DefaultActionGroup
+        val logToolbarActionGroup = actionManager.getAction("LayoutBounder.LogToolbarActions") as DefaultActionGroup
         val logToolbar = actionManager.createActionToolbar(
             ActionPlaces.TOOLWINDOW_CONTENT,
             logToolbarActionGroup,
