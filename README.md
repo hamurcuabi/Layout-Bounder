@@ -1,8 +1,5 @@
 # Layout Bounder
 
-[![Version](https://img.shields.io/jetbrains/plugin/v/14969.svg)](https://plugins.jetbrains.com/plugin/14969)
-[![Downloads](https://img.shields.io/jetbrains/plugin/d/14969.svg)](https://plugins.jetbrains.com/plugin/14969)
-
 <!-- Plugin description -->
 This plugin simplifies the usage of layout debug mode's.
 \
