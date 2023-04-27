@@ -26,6 +26,8 @@
 
     </extensions>
 
+    <description>This plugin simplifies the usage of layout debug mode's.</description>
+
     <actions>
         <action
                 id="LayoutBounder.Refresh"
