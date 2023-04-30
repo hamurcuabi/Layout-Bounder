@@ -1,5 +1,7 @@
 # Layout Bounder
 
+https://plugins.jetbrains.com/plugin/21615-layout-bounder
+
 This plugin simplifies the usage of layout debug mode's.
 \
 ![Layout Bounder](https://user-images.githubusercontent.com/23655824/233925249-1edf1757-e054-4459-8ef5-1820fd6d16f6.gif)  
